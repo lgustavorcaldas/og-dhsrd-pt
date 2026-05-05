@@ -3567,7 +3567,7 @@ function printDifficultyBenchmarks() {
 	dBench += "</div>"; // close col
 	dBench += "<div class='col-12 col-md-6'>"; // open col
 	dBench += "<div class='text-center'>"; // open fig
-	dBench += "<img class='og-fig-md' src='images/duality-dice.svg' alt='Duality Dice: The Hope die result is 12. The Fear die result is 1.' aria-hidden='true'>";
+	dBench += "<img class='og-fig-md' src='images/duality-dice.svg' alt='Duality Dice: The Hope Die result is 12. The Fear Die result is 1.' aria-hidden='true'>";
 	dBench += "</div>"; // close fig
 	dBench += "</div>"; // close col
 	dBench += "</div>"; // close row
