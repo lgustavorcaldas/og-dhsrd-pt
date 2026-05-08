@@ -655,8 +655,8 @@ const consumableList = [
 { label: "Attune Potion", name: "attune-potion", pages: ["Page 132"], errata: false, feature: "You gain a +1 bonus to your next <a href='#define-trait-roll'>Instinct Roll</a>." },
 { label: "Charm Potion", name: "charm-potion", pages: ["Page 132"], errata: false, feature: "You gain a +1 bonus to your next <a href='#define-trait-roll'>Presence Roll</a>." },
 { label: "Enlighten Potion", name: "enlighten-potion", pages: ["Page 132"], errata: false, feature: "You gain a +1 bonus to your next <a href='#define-trait-roll'>Knowledge Roll</a>." },
-{ label: "Minor Health Potion", name: "minor-health-potion", pages: ["Page 132"], errata: false, feature: "Clear 1d4 <a href='#define-hit-point'>Hit Points</a>." },
-{ label: "Minor Stamina Potion", name: "minor-stamina-potion", pages: ["Page 132"], errata: false, feature: "Clear 1d4 <a href='#define-stress'>Stress</a>." },
+{ label: "Minor Health Potion", name: "minor-health-potion", pages: ["Page 132"], errata: false, feature: "Clear <strong>1d4</strong> <a href='#define-hit-point'>Hit Points</a>." },
+{ label: "Minor Stamina Potion", name: "minor-stamina-potion", pages: ["Page 132"], errata: false, feature: "Clear <strong>1d4</strong> <a href='#define-stress'>Stress</a>." },
 { label: "Grindletooth Venom", name: "grindletooth-venom", pages: ["Page 132"], errata: false, feature: "You can apply this venom to a <a href='#define-weapon'>weapon</a> that deals <a href='#define-damage-type'>physical damage</a> to add a <strong>d6</strong> to your next <a href='#define-damage-roll'>damage roll</a> with that weapon." },
 { label: "Varik Leaves", name: "varik-leaves", pages: ["Page 132"], errata: false, feature: "You can eat these paired leaves to immediately gain 2 <a href='#define-hope'>Hope</a>." },
 { label: "Vial of Moondrip", name: "vial-of-moondrop", pages: ["Page 132"], errata: false, feature: "When you drink the contents of this vial, you can see in total darkness until your next <a href='#define-downtime'>rest</a>." },
@@ -667,8 +667,8 @@ const consumableList = [
 { label: "Vial of Darksmoke", name: "vial-of-darksmoke", pages: ["Page 132"], errata: false, feature: "When an <a href='#define-adversary'>adversary</a> attacks you, use this vial and roll a number of <strong>d6</strong> equal to your <a href='#define-agility'>Agility</a>. Add the highest result to your <a href='#define-evasion'>Evasion</a> against the attack." },
 { label: "Jumping Root", name: "jumping-root", pages: ["Page 132"], errata: false, feature: "Eat this root to leap up to <a href='#define-range'>Far</a> range once without needing to roll." },
 { label: "Snap Powder", name: "snap-powder", pages: ["Page 132"], errata: false, feature: "<strong><a href='#define-stress'>Mark a Stress</a></strong> and clear a <a href='#define-hit-point'>Hit Point</a>." },
-{ label: "Health Potion", name: "health-potion", pages: ["Page 132"], errata: false, feature: "Clear 1d4+1 <a href='#define-hit-point'>Hit Points</a>." },
-{ label: "Stamina Potion", name: "stamina-potion", pages: ["Page 132"], errata: false, feature: "Clear 1d4+1 <a href='#define-stress'>Stress</a>." },
+{ label: "Health Potion", name: "health-potion", pages: ["Page 132"], errata: false, feature: "Clear <strong>1d4+1</strong> <a href='#define-hit-point'>Hit Points</a>." },
+{ label: "Stamina Potion", name: "stamina-potion", pages: ["Page 132"], errata: false, feature: "Clear <strong>1d4+1</strong> <a href='#define-stress'>Stress</a>." },
 { label: "Armor Stitcher", name: "armor-stitcher", pages: ["Page 132"], errata: false, feature: "You can use this stitcher to spend any number of Hope and clear that many <a href='#define-armor'>Armor Slots</a>." },
 { label: "Gill Salve", name: "gill-salve", pages: ["Page 132"], errata: false, feature: "You can apply this salve to your neck to breathe underwater for a number of minutes equal to your <a href='#define-level'>level" },
 { label: "Replication Parchment", name: "replication-parchment", pages: ["Page 132"], errata: false, feature: "By touching this piece of parchment to another, you can perfectly copy the second parchment's contents. Once used, this parchment becomes mundane paper." },
@@ -1168,12 +1168,13 @@ function printCC() {
 	CC += getReferences(["Editorial Addition"]);
 	CC += getCCnote("Your <strong>character sheet</strong> contains information about your character you'll use to play the game. You can download and print official <a href='https://www.daggerheart.com/downloads/'>Daggerheart Character Sheets and Guides</a>, or use a different solution the GM chooses&mdash;for example, a virtual tabletop (VTT).</p>");
 	CC += "<h4 class='h6' id='old-gus-character-sheet'>Old Gus' Character Sheets<a class='og-h-anchor' href='#defiold-gus-character-sheetet' title='Permalink' aria-hidden='true'></a></h4>";
-	CC += getCCnote("You can use these printable or form-fillable PDF character sheets for any type of character, including <a href='#define-domain-card'>domain cards</a>. The <a href='https://heartofdaggers.com'>heartofdaggers.com</a> character sheet tools can export your PC to this sheet format. Choose one of the following versions:");
+	CC += getCCnote("You can use these printable or form-fillable PDF character sheets for any type of character, including <a href='#define-domain-card'>domain cards</a>. The <a href='https://heartofdaggers.com'>heartofdaggers.com</a> character sheet tools can export your PC to this sheet format. A six-page rules quick-reference for players is also provided.");
 	CC += "<ul class='list-inline'>";
 	CC += "<li class='list-inline-item'><a href='pdfs/old-gus-daggerheart-character-sheet.pdf' class='btn mt-1 mb-1 theme-light border'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Extra Notes</a></li>";
 	CC += "<li class='list-inline-item'><a href='pdfs/old-gus-daggerheart-character-sheet-fillable.pdf' class='btn mt-1 mb-1 theme-light border'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Extra Notes (Form-Fillable)</a></li>";
 	CC += "<li class='list-inline-item'><a href='pdfs/old-gus-daggerheart-character-sheet-ranger.pdf' class='btn mt-1 mb-1 theme-light border'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Ranger Companion</a></li>";
 	CC += "<li class='list-inline-item'><a href='pdfs/old-gus-daggerheart-character-sheet-ranger-fillable.pdf' class='btn mt-1 mb-1 theme-light border'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Ranger Companion (Form-Fillable)</a></li>";
+	CC += "<li class='list-inline-item'><a href='pdfs/old-gus-daggerheart-quick-reference.pdf' class='btn mt-1 mb-1 theme-light border'><span aria-hidden='true' class='fw-bold'>&#x21e9;&nbsp;</span>Quick-Reference</a></li>";
 	CC += "</ul>";
 	CC += "<h4 class='h6' id='qedhup-character-sheet'>Qedhup's Character Sheets<a class='og-h-anchor' href='#qedhup-character-sheet' title='Permalink' aria-hidden='true'></a></h4>";
 	CC += getCCnote("This printable A5 PDF by <a href='https://ko-fi.com/qedhup'>Qedhup</a> features a blank sheet, a starter sheet for each <a href='#define-class'>class</a>, and a final shared utility page to track <a href='#define-consumable'>consumables</a> and <a href='#define-advancement'>advancements</a>.");
@@ -2807,7 +2808,7 @@ function printTraits() {
 	traitContent += "</ul>";
 	traitContent += "<dl>";
 	traitContent += "<dt>Trait Arrays</dt>";
-	traitContent += "<dd>Your traits start with an <a href='#define-trait-array'>array</a> of <a href='#define-procedure'>modifiers</a> assigned during <a href='#define-character-creation'>character creation</a>.</dd>";
+	traitContent += "<dd>Your traits start with an <a href='#cc-step-5'>array</a> of <a href='#define-procedure'>modifiers</a> assigned during <a href='#define-character-creation'>character creation</a>.</dd>";
 	traitContent += "<dt>Traits and Action Rolls</dt>";
 	traitContent += "<dd>When you make an <a href='#define-action-roll'>action roll</a>, the relevant trait's <a href='#define-procedure'>modifier</a> is added to the roll's total.</dd>";
 	traitContent += "<dt>Negative Modifiers</dt>";
@@ -2910,7 +2911,7 @@ function printEquipment() {
 	iWep += "<dt>Feature</dt>";
 	iWep += "<dd>Some weapons have special properties or features when active.</dd>";
 	iWep += "<dt>Throwing Weapons</dt>";
-	iWep += "<dd>You can make an <a href='#define-finesse'>Finesse</a> <a href='#define-attack-roll'>attack roll</a> to throw an active weapon within <a href='#define-range'>Very Close</a> range, dealing its <a href='#define-damage-roll'>damage</a> on a success. Once thrown, the weapon isn't active.</dd>";
+	iWep += "<dd>You can make a <a href='#define-finesse'>Finesse</a> <a href='#define-attack-roll'>attack roll</a> to throw an active weapon within <a href='#define-range'>Very Close</a> range, dealing its <a href='#define-damage-roll'>damage</a> on a success. Once thrown, the weapon isn't active.</dd>";
 	iWep += "<dt>Unarmed Attacks</dt>";
 	iWep += "<dd>Use either <a href='#define-strength'>Strength</a> or <a href='#define-finesse'>Finesse</a> for the <a href='#define-attack-roll'>attack roll</a> unless the GM allows otherwise, and deal <strong>d4</strong> <a href='#define-damage-type'>physical damage</a>.</dd>";
 	iWep += "</dl>";
