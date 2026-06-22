@@ -3487,7 +3487,7 @@ function printRanges() {
 	iRange += "<dt>Movement Under Pressure</dt>";
 	iRange += "<dd>You can move within <strong>Very Close</strong> or <strong>Close</strong> range and take an <a href='#define-action'>action</a>. If you move within <strong>Far</strong> or <strong>Very Far</strong> range, you must succeed on an <a href='#define-trait-roll'>Agility Roll</a> to reposition yourself safely.</dd>";
 	iRange += "<dt>Adversary Movement</dt>";
-	iRange += "<dd>An <a href='#define-adversary'>adversary</a> can move within <strong>Close</strong> range for free as part of an <a href='#define-adversary-action'>adversary action</a>, or within <a href='#define-range'>Very Far</a> range as a separate action.</dd>";
+	iRange += "<dd>When an <a href='#define-adversary'>adversary</a> is spotlighted, they can move within <strong>Close</strong> range and take an <a href='#define-adversary-action'>adversary action</a>. Alternatively, they can mvoe within <a href='#define-range'>Very Far</a> range without taking an action.</dd>";
 	iRange += "</dl>";
 	iRange += "<h4 class='h6'>Ranges</h4>";
 	iRange += "<div class='table-responsive'><table class='table table-light table-striped table-sm mb-3'>";
