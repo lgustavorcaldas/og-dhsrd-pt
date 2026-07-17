@@ -9,7 +9,7 @@ const cacheFiles = [
     'scripts/og-dhsrd-features.js',
 ]
 // the cache version gets updated every time there is a new deployment
-const CACHE_VERSION = 1;
+const CACHE_VERSION = 2;
 const CURRENT_CACHE = `OG-DHSRD-${CACHE_VERSION}`;
 console.log(CURRENT_CACHE)
 
